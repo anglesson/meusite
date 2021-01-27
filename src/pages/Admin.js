@@ -1,21 +1,29 @@
 import React from 'react';
 import './Admin.css';
+import Avatar from '../components/Avatar/Avatar';
 
-import { 
-  Nav, 
-  Navbar, 
-  NavDropdown, 
-  Form, 
-  FormControl, 
-  Button, 
-  Container, 
-  Row, 
-  Col, 
-  Tabs, 
-  Tab, Card 
+import avatar from '../assets/img/avatar.jpg';
+
+import {
+  Nav,
+  Navbar,
+  NavDropdown,
+  Form,
+  FormControl,
+  Button,
+  Container,
+  Row,
+  Col,
+  Tabs,
+  Tab,
+  Card,
+  InputGroup
 } from 'react-bootstrap';
 
 const Admin = () => {
+  const handleAppear = (event) => {
+    event.preventDefault();
+  }
   return (
     <>
       <Navbar bg="light" expand="lg">
@@ -41,18 +49,41 @@ const Admin = () => {
       </Navbar>
       <Container className="container-admin">
         <Row>
-          <Col className="border-red">
+          <Col>
             <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
               <Tab eventKey="home" title="Site">
-                <p>Configure a aparência do site</p>
-                <Card>
-                  <Card.Header>Avatar</Card.Header>
-                  <Card.Body>
-                    <Card.Text>
-                      With supporting text below as a natural lead-in to additional content.
-                    </Card.Text>
+                <Container>
+                  <Card.Body style={{ textAlign: "initial" }}>
+                    <Form onSubmit={handleAppear}>
+                      <label>Avatar</label>
+                      <Row>
+                        <Col>
+                          <Avatar avatar={avatar} />
+                        </Col>
+                      </Row>
+                      <label htmlFor="basic-url">Seu link</label>
+                      <InputGroup className="mb-3">
+                        <InputGroup.Prepend>
+                          <InputGroup.Text id="basic-addon3">
+                            https://meusite.in/
+                          </InputGroup.Text>
+                        </InputGroup.Prepend>
+                        <FormControl id="basic-url" aria-describedby="basic-addon3" />
+                      </InputGroup>
+                      <Form.Group controlId="formBasicEmail">
+                        <Form.Label>Título</Form.Label>
+                        <Form.Control type="text" placeholder="Título" />
+                      </Form.Group>
+                      <Form.Group controlId="formBasicEmail" >
+                        <Form.Label>Fundo</Form.Label>
+                        <Form.Control type="color" placeholder="Nome" />
+                      </Form.Group>
+                      <Form.Group className="align-items-right">
+                        <Button type="submit">Salvar</Button>
+                      </Form.Group>
+                    </Form>
                   </Card.Body>
-                </Card>
+                </Container>
               </Tab>
               <Tab eventKey="profile" title="Links">
                 <p>Teste Tab Profile</p>
@@ -62,14 +93,17 @@ const Admin = () => {
               </Tab>
             </Tabs>
           </Col>
-          <Col className="border-red">
-            <div className="frame-container">
-              <div className="frame-content">
-                <iframe className="frame-preview" frameborder="0" width="100px" height="400px" >
-
-                </iframe>
-              </div>
-            </div>
+          <Col>
+            <Container>
+              <Row className="justify-content-md-center">
+                <div className="frame-container">
+                  <div className="frame-content">
+                    <iframe className="frame-preview" src="/anglesson" frameborder="0" width="100px" height="400px" >
+                    </iframe>
+                  </div>
+                </div>
+              </Row>
+            </Container>
           </Col>
         </Row>
       </Container>
