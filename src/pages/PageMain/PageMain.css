@@ -1,3 +1,95 @@
-.main {
-    
+::-webkit-scrollbar {
+  width: 0px;
+}
+.body {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.container-page {
+  width: 700px;
+  min-width: 250px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80px;
+}
+
+.image {
+  position: relative;
+  max-height: 6rem;
+  max-width: 6rem;
+  border-radius: 100%;
+  margin: 20px;
+}
+
+.avatar-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80px;
+  min-width: 80px;
+}
+
+.button-list {
+  display: flex;
+  white-space: normal;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80px;
+}
+
+.button, .button:link, .button:active{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 14rem;
+  height: 40px;
+  background-color: blue;
+  text-decoration: none;
+  color: #FFF;
+  margin: 0.4rem 0;
+}
+
+.button:hover {
+  opacity: 0.8;
+  color: #FFF;
+}
+
+.squad-circle {
+  border-radius: 5px;
+}
+
+.circle {
+  border-radius: 20px;
+}
+
+.squad {
+  border-radius: 0;
+}
+
+.btn-image {
+  padding: 0.3rem 0.5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  width: 14rem;
+  height: 40px;
+  background-color: blue;
+  text-decoration: none;
+  color: #FFF;
+  margin: 0.4rem 0;
+  background-image: url('../../assets/img/image.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100px;
 }

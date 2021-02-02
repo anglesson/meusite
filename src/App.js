@@ -11,7 +11,7 @@ import PrivateRoute from "./components/PrivateRoute";
 
 const App = () => {
   const [dadosDaPagina, setDadosDaPagina] = useState({
-    bc: "red"
+    bc: "blue"
   });
 
   const teste = () => {

@@ -41,10 +41,6 @@ const Admin = () => {
               <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
             </NavDropdown>
           </Nav>
-          <Form inline>
-            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-            <Button variant="outline-success">Search</Button>
-          </Form>
         </Navbar.Collapse>
       </Navbar>
       <Container className="container-admin">
@@ -74,9 +70,9 @@ const Admin = () => {
                         <Form.Label>Título</Form.Label>
                         <Form.Control type="text" placeholder="Título" />
                       </Form.Group>
-                      <Form.Group controlId="formBasicEmail" >
-                        <Form.Label>Fundo</Form.Label>
-                        <Form.Control type="color" placeholder="Nome" />
+                      <Form.Group controlId="formBasicEmal" >
+                        <Form.Label forHtml="back_color" >Fundo</Form.Label>s
+                        <Form.Control id="back_color" type="color" placeholder="Nome" />
                       </Form.Group>
                       <Form.Group className="align-items-right">
                         <Button type="submit">Salvar</Button>

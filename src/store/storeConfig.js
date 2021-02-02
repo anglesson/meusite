@@ -5,7 +5,7 @@ import siteReducer from './reducers/siteReducer'
 const reducers = combineReducers({
     site: function(state, action) {
         return {
-            bc: "red"
+            bc: "blue"
         }
     }
 })
