@@ -1,36 +1,69 @@
 import React from 'react';
 import { useParams } from 'react-router-dom'
 import { connect } from 'react-redux'
-
 import avatar from '../../assets/img/avatar.jpg'
-import image from '../../assets/img/image.jpg'
+import FontIcon from '../../components/FontIcon/FontIcon'
 
 import './PageMain.css'
 
 const PageMain = (props) => {
-	let { sitename } = useParams();
+
+	const site = {
+		pageName: 'Roberto Viera',
+		subtitle: 'CEO MeuSite',
+		elements: [
+			{
+				link: '#link',
+				description: 'Facebook',
+				typeButton: 'btn-image',
+				form: 'squad-circle'
+			},
+			{
+				link: '#link',
+				description: 'Twitter',
+				icon: 'twitter',
+				typeButton: 'button',
+				form: 'squad-circle'
+			},
+			{
+				link: '#link',
+				description: 'Twitter',
+				icon: 'twitter',
+				typeButton: 'button',
+				form: 'squad-circle'
+			},
+			{
+				link: '#link',
+				description: 'Twitter',
+				icon: 'twitter',
+				typeButton: 'button',
+				form: 'squad-circle'
+			},
+		],
+		hasFooter: true
+	}
+
 	return (
 		<div className="body">
 			<div className="container-page">
 				<div className="header">
 					<div className="avatar-image">
-					<img className="image" src={avatar} alt="Image Page" />
+						<img className="image" src={avatar} alt="Image Page" />
 					</div>
-					<p>Nome da Página</p>
+					<p style={{ textAlign: 'center' }}>{site.pageName} <br />
+						<span style={{ fontSize: '12px', color: '#545454' }}>{site.subtitle}</span>
+					</p>
 				</div>
 				<div className="button-list">
-					<a className="btn-image squad-circle" href="#teste">
-						<div>Evento dia 23 JAN 2020</div>
-					</a>
-					<a className="button squad-circle" href="#teste">
-						<div>WhatsApp</div>
-					</a>
-					<a className="button squad-circle" href="#teste">
-						<div>Twitter</div>
-					</a>
-					<a className="button squad-circle" href="#teste">
-						<div>Facebook</div>
-					</a>
+					{site.elements.map((el) => {
+						return <a className={`${el.typeButton} ${el.form}`} href="#teste">
+							<FontIcon icon={el.icon} size={20} />
+							<div>{el.description}</div>
+						</a>
+					})}
+				</div>
+				<div className="footer" hidden={!site.hasFooter}>
+					MeuSite
 				</div>
 			</div>
 		</div>
