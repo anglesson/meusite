@@ -1,8 +1,7 @@
 import React from 'react';
-import { useParams } from 'react-router-dom'
-import { connect } from 'react-redux'
-import avatar from '../../assets/img/avatar.jpg'
-import FontIcon from '../../components/FontIcon/FontIcon'
+import { connect } from 'react-redux';
+import avatar from '../../assets/img/avatar.jpg';
+import FontIcon from '../../components/FontIcon/FontIcon';
 
 import './PageMain.css'
 

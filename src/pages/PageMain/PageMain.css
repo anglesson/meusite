@@ -33,14 +33,15 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  min-height: 120px;
   margin-top: 30px;
 }
 
 .image {
   position: relative;
-  max-height: 6rem;
-  max-width: 6rem;
+  height: 8vmax;
+  width: 8vmax;
+  min-height: 6vmin;
+  min-width: 6vmin;
   border-radius: 100%;
 }
 
@@ -48,8 +49,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 80px;
-  min-width: 80px;
+    /* min-height: 80px;
+    min-width: 80px; */
 }
 
 .button-list {
