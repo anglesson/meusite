@@ -31,7 +31,7 @@ const PageMain = (props) => {
 
 	return (
 		<div className="body">
-			<div className="container-page red">
+			<div className="container-page">
 				<div className="header">
 					<div className="avatar-image">
 						<img className="image" src={avatar} alt="Image Page" />
