@@ -1,27 +1,40 @@
 ::-webkit-scrollbar {
   width: 0px;
 }
+
 .body {
   display: flex;
   justify-content: center;
   height: auto;
   width: 100%;
+  min-height: 100vh;
 }
 
 .container-page {
-  display: flex;
+  display: grid;
+  grid-template-areas: 
+    "header"
+    "content"
+    "footer"
+  ;
+  grid-template-columns: 1fr;
+  grid-template-rows: 
+    auto 
+    1fr 
+    50px;
   flex-direction: column;
-  justify-content: space-between;
   width: 700px;
   min-width: 250px;
 }
 
 .header {
+  grid-area: header;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  min-height: 80px;
+  min-height: 120px;
+  margin-top: 30px;
 }
 
 .image {
@@ -29,7 +42,6 @@
   max-height: 6rem;
   max-width: 6rem;
   border-radius: 100%;
-  margin: 10px;
 }
 
 .avatar-image {
@@ -41,27 +53,30 @@
 }
 
 .button-list {
+  grid-area: content;
   display: flex;
   white-space: normal;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  min-height: 80px;
+  margin-bottom: 10px;
 }
 
 .button, .button:link, .button:active{
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 14rem;
-  height: 2rem;
+  width: 90%;
+  height: 2.5rem;
   text-decoration: none;
-  color: #FFF;
+  color: #a7a7a7;
   margin: 0.28rem 0;
-  background-image: url('../../assets/img/image.jpg');
+  background-color: black;
+  /* background-image: url('../../assets/img/image.jpg');
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
 }
 
 .button:hover {
@@ -86,7 +101,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
-  width: 14rem;
+  width:90%;
   height: 100px;
   background-color: blue;
   text-decoration: none;
@@ -99,7 +114,10 @@
 }
  
 .footer {
-  display: block;
+  display: grid;
+  grid-area: footer;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
+  margin-bottom: 0.3fr;
 } 
+

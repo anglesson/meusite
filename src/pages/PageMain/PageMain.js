@@ -20,22 +20,8 @@ const PageMain = (props) => {
 			},
 			{
 				link: '#link',
-				description: 'Twitter',
-				icon: 'twitter',
-				typeButton: 'button',
-				form: 'squad-circle'
-			},
-			{
-				link: '#link',
-				description: 'Twitter',
-				icon: 'twitter',
-				typeButton: 'button',
-				form: 'squad-circle'
-			},
-			{
-				link: '#link',
-				description: 'Twitter',
-				icon: 'twitter',
+				description: 'Facebook',
+				icon: 'facebook',
 				typeButton: 'button',
 				form: 'squad-circle'
 			},
@@ -45,25 +31,25 @@ const PageMain = (props) => {
 
 	return (
 		<div className="body">
-			<div className="container-page">
+			<div className="container-page red">
 				<div className="header">
 					<div className="avatar-image">
 						<img className="image" src={avatar} alt="Image Page" />
 					</div>
 					<p style={{ textAlign: 'center' }}>{site.pageName} <br />
-						<span style={{ fontSize: '12px', color: '#545454' }}>{site.subtitle}</span>
+						<span style={{ fontSize: '12px', color: '#545454', margin: "0px" }}>{site.subtitle}</span>
 					</p>
 				</div>
 				<div className="button-list">
 					{site.elements.map((el) => {
 						return <a className={`${el.typeButton} ${el.form}`} href="#teste">
-							<FontIcon icon={el.icon} size={20} />
-							<div>{el.description}</div>
+							<FontIcon icon={el.icon} size={20} className="blue"/>
+							{el.description}
 						</a>
 					})}
 				</div>
 				<div className="footer" hidden={!site.hasFooter}>
-					MeuSite
+					<p>Meu Site</p>
 				</div>
 			</div>
 		</div>
