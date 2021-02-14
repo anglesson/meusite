@@ -8,7 +8,7 @@ import './PageMain.css'
 const PageMain = (props) => {
 
 	const site = {
-		pageName: 'Roberto Viera',
+		pageName: 'Anglesson Araujo',
 		subtitle: 'CEO MeuSite',
 		elements: [
 			{

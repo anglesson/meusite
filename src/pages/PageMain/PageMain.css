@@ -1,3 +1,7 @@
+.red {
+  border: 1px solid red;
+}
+
 ::-webkit-scrollbar {
   width: 0px;
 }
@@ -38,10 +42,10 @@
 
 .image {
   position: relative;
-  height: 8vmax;
-  width: 8vmax;
-  min-height: 6vmin;
-  min-width: 6vmin;
+  width: 28vw;
+  height: 28vw;
+  max-width: 110px;
+  max-height: 110px;
   border-radius: 100%;
 }
 
@@ -49,8 +53,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-    /* min-height: 80px;
-    min-width: 80px; */
 }
 
 .button-list {
