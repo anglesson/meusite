@@ -1,0 +1,14 @@
+.image {
+  position: relative;
+  width: 28vw;
+  height: 28vw;
+  max-width: 110px;
+  max-height: 110px;
+  border-radius: 100%;
+}
+
+.avatar-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
