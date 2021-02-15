@@ -1,15 +1,19 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import avatar from '../../assets/img/avatar.jpg';
 import FontIcon from '../../components/FontIcon/FontIcon';
+import Header from '../../components/Header/Header';
+
+import avatar from '../../assets/img/avatar.jpg';
 
 import './PageMain.css'
+import Banner from '../../components/Banner/Banner';
 
 const PageMain = (props) => {
 
 	const site = {
 		pageName: 'Anglesson Araujo',
 		subtitle: 'CEO MeuSite',
+		useBanner: false,
 		elements: [
 			{
 				link: '#link',
@@ -19,8 +23,36 @@ const PageMain = (props) => {
 			},
 			{
 				link: '#link',
+				description: 'Instagram',
+				icon: 'instagram',
+				typeButton: 'button',
+				form: 'squad-circle'
+			},
+			{
+				link: '#link',
 				description: 'Facebook',
 				icon: 'facebook',
+				typeButton: 'button',
+				form: 'squad-circle'
+			},
+			{
+				link: '#link',
+				description: 'Twitter',
+				icon: 'twitter',
+				typeButton: 'button',
+				form: 'squad-circle'
+			},
+			{
+				link: '#link',
+				description: 'Github',
+				icon: 'github',
+				typeButton: 'button',
+				form: 'squad-circle'
+			},
+			{
+				link: '#link',
+				description: 'LinkedIn',
+				icon: 'linkedin',
 				typeButton: 'button',
 				form: 'squad-circle'
 			},
@@ -31,19 +63,17 @@ const PageMain = (props) => {
 	return (
 		<div className="body">
 			<div className="container-page">
-				<div className="header">
-					<div className="avatar-image">
-						<img className="image" src={avatar} alt="Image Page" />
-					</div>
-					<p style={{ textAlign: 'center' }}>{site.pageName} <br />
-						<span style={{ fontSize: '12px', color: '#545454', margin: "0px" }}>{site.subtitle}</span>
-					</p>
-				</div>
+				<Header
+					avatar={avatar} 
+					pageName={site.pageName}
+					subtitle={site.subtitle}
+					useBanner={site.useBanner}
+				/>
 				<div className="button-list">
 					{site.elements.map((el) => {
 						return <a className={`${el.typeButton} ${el.form}`} href="#teste">
-							<FontIcon icon={el.icon} size={20} className="blue"/>
-							{el.description}
+								<FontIcon icon={el.icon} size={20}/>
+								{el.description}
 						</a>
 					})}
 				</div>

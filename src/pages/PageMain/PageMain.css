@@ -9,14 +9,14 @@
 .body {
   display: flex;
   justify-content: center;
+  align-items: center;
   height: auto;
-  width: 100%;
   min-height: 100vh;
 }
 
 .container-page {
   display: grid;
-  grid-template-areas: 
+  grid-template-areas:
     "header"
     "content"
     "footer"
@@ -27,32 +27,8 @@
     1fr 
     50px;
   flex-direction: column;
-  width: 700px;
+  width: 100%;
   min-width: 250px;
-}
-
-.header {
-  grid-area: header;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  margin-top: 30px;
-}
-
-.image {
-  position: relative;
-  width: 28vw;
-  height: 28vw;
-  max-width: 110px;
-  max-height: 110px;
-  border-radius: 100%;
-}
-
-.avatar-image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .button-list {
@@ -66,16 +42,23 @@
 }
 
 .button, .button:link, .button:active{
+  text-decoration: none;
   position: relative;
   display: flex;
+  gap: 10px;
   justify-content: center;
   align-items: center;
-  width: 90%;
-  height: 2.5rem;
-  text-decoration: none;
+  width: 40%;
+  min-width: 210px;
+  /* height: 2.5rem; */
+  padding: 0.5rem 1rem;
+  height: auto;
+  min-height: 3.0rem;
   color: #a7a7a7;
   margin: 0.28rem 0;
   background-color: black;
+  text-align: center;
+
   /* background-image: url('../../assets/img/image.jpg');
   background-position: center;
   background-repeat: no-repeat;
@@ -83,7 +66,7 @@
 }
 
 .button:hover {
-  opacity: 0.8;
+  opacity: 0.9;
   color: #FFF;
 }
 
@@ -100,22 +83,27 @@
 }
 
 .btn-image {
-  padding: 0.3rem 0.5rem;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
-  width:90%;
-  height: 100px;
-  background-color: blue;
   text-decoration: none;
+  padding: 0 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  min-width: 210px;
+  height: 100px;
+  background-color: #2D88FF;
   color: #FFF;
   margin: 0.4rem 0;
-  background-image: url('../../assets/img/image.jpg');
+  /* background-image: url('../../assets/img/image.jpg');
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
 }
- 
+
+#root > div > div > div > div.button-list > a.btn-image.squad-circle {
+  text-decoration: none;
+}
+
 .footer {
   display: grid;
   grid-area: footer;
