@@ -1,18 +1,18 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import FontIcon from '../../components/FontIcon/FontIcon';
 import Header from '../../components/Header/Header';
 
 import avatar from '../../assets/img/avatar.jpg';
 
 import './PageMain.css'
-import Banner from '../../components/Banner/Banner';
+import Button from '../../components/Button/Button';
+import Footer from '../../components/Footer/Footer';
 
 const PageMain = (props) => {
 
 	const site = {
 		pageName: 'Anglesson Araujo',
-		subtitle: 'CEO MeuSite',
+		subtitle: 'CEO Meu Site',
 		useBanner: false,
 		elements: [
 			{
@@ -64,22 +64,22 @@ const PageMain = (props) => {
 		<div className="body">
 			<div className="container-page">
 				<Header
-					avatar={avatar} 
+					avatar={avatar}
 					pageName={site.pageName}
 					subtitle={site.subtitle}
 					useBanner={site.useBanner}
 				/>
 				<div className="button-list">
-					{site.elements.map((el) => {
-						return <a className={`${el.typeButton} ${el.form}`} href="#teste">
-								<FontIcon icon={el.icon} size={20}/>
-								{el.description}
-						</a>
-					})}
+					{
+						site.elements.map((el) => {
+							return <Button
+								classes={`${el.typeButton} ${el.form}`}
+								icon={el.icon} size={20}
+								description={el.description} />
+						})
+					}
 				</div>
-				<div className="footer" hidden={!site.hasFooter}>
-					<p>Meu Site</p>
-				</div>
+				<Footer hasFooter={site.hasFooter} />
 			</div>
 		</div>
 	)

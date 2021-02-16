@@ -1,0 +1,7 @@
+.Footer {
+  display: grid;
+  grid-area: footer;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.3fr;
+} 

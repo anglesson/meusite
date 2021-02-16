@@ -1,9 +1,26 @@
+.AvatarPM {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 29%;
+}
+
+.AvatarPM > p {
+  text-align: center;
+  word-wrap: normal;
+  font-size: 1em;
+  font-weight: 600;
+}
+
 .image {
   position: relative;
-  width: 28vw;
+  width: 140px;
+  height: 140px;
+  /* width: 28vw;
   height: 28vw;
   max-width: 110px;
-  max-height: 110px;
+  max-height: 110px; */
   border-radius: 100%;
 }
 
