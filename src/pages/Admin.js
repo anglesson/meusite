@@ -94,7 +94,7 @@ const Admin = () => {
               <Row className="justify-content-md-center">
                 <div className="frame-container">
                   <div className="frame-content">
-                    <iframe className="frame-preview" src="/anglesson" frameborder="0" width="100px" height="400px" >
+                    <iframe title="MeuSiteFrame" className="frame-preview" src="/anglesson" frameborder="0" width="100px" height="400px" >
                     </iframe>
                   </div>
                 </div>

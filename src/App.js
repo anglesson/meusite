@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
@@ -10,9 +10,6 @@ import { AuthProvider } from "./Auth";
 import PrivateRoute from "./components/PrivateRoute";
 
 const App = () => {
-  const [dadosDaPagina, setDadosDaPagina] = useState({
-    bc: "blue"
-  });
 
   const teste = () => {
     alert('chegou!');

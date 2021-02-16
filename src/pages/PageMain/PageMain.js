@@ -4,15 +4,16 @@ import Header from '../../components/Header/Header';
 
 import avatar from '../../assets/img/avatar.jpg';
 
-import './PageMain.css'
 import Button from '../../components/Button/Button';
 import Footer from '../../components/Footer/Footer';
+
+import './PageMain.css';
 
 const PageMain = (props) => {
 
 	const site = {
 		pageName: 'Anglesson Araujo',
-		subtitle: 'CEO Meu Site',
+		subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lobortis quam a imperdiet suscipit. Etiam faucibus nam.',
 		useBanner: false,
 		elements: [
 			{

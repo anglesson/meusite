@@ -5,9 +5,9 @@ import './AvatarPageMain.css'
 const AvatarPM = (props) => (
   <div className="AvatarPM" hidden={props.useBanner}>
     <div className="avatar-image">
-      <img className="image" src={props.avatar} alt="Image Page" />
+      <img className="image" src={props.avatar} alt="ImagePage" />
     </div>
-    <h2 style={{ textAlign: 'center' }}>{props.pageName}</h2>
+    <h1>{props.pageName}</h1>
     <p>{props.subtitle}</p>
   </div>
 )

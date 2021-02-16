@@ -12,7 +12,7 @@ const Avatar = (props) => {
                 <figure class="personal-figure">
                     <img src={props.avatar} className="personal-avatar" alt="avatar"></img>
                     <figcaption class="personal-figcaption">
-                        <img src="https://raw.githubusercontent.com/ThiagoLuizNunes/angular-boilerplate/master/src/assets/imgs/camera-white.png"></img>
+                        <img alt="Logo" src="https://raw.githubusercontent.com/ThiagoLuizNunes/angular-boilerplate/master/src/assets/imgs/camera-white.png"></img>
                     </figcaption>
                 </figure>
             </label>
